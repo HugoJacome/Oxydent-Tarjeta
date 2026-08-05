@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1012px;height:638px;overflow:hidden;font-family:'Segoe UI',sans-serif}
+.card{
+  width:1012px;height:638px;position:relative;overflow:hidden;text-align:center;
+  background:
+    radial-gradient(700px 420px at 50% -15%, rgba(201,161,59,.12), transparent 60%),
+    linear-gradient(165deg,#211a1c 0%,#191416 55%,#120e0f 100%);
+}
+.card::before{content:'';position:absolute;inset:22px;border:1.5px solid #c9a13b;border-radius:24px;opacity:.9}
+.card::after{content:'';position:absolute;inset:30px;border:1px solid rgba(201,161,59,.3);border-radius:18px}
+.curves{position:absolute;inset:0;opacity:.6}
+.tooth{margin-top:52px}
+.script{
+  font-family:'Palatino Linotype',Georgia,serif;font-style:italic;font-weight:700;font-size:58px;line-height:1;margin-top:10px;
+  background:linear-gradient(170deg,#ecd398 0%,#c9a13b 50%,#e8cf7a 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.sub{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:12px}
+.sub .ln{width:56px;height:1px;background:linear-gradient(90deg,transparent,#c9a13b)}
+.sub .ln2{width:56px;height:1px;background:linear-gradient(90deg,#c9a13b,transparent)}
+.sub .tx{font-size:13.5px;letter-spacing:6px;text-transform:uppercase;color:#c9a5ab;font-weight:600}
+.qrbox{display:inline-block;background:#fff;padding:15px;border-radius:18px;margin-top:26px;border:1.5px solid #c9a13b;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.qrbox svg{display:block;width:198px;height:198px}
+.cta{font-family:'Palatino Linotype',Georgia,serif;font-size:23px;color:#f2e9df;margin-top:24px;letter-spacing:.5px}
+.cta small{display:block;font-family:'Segoe UI',sans-serif;font-size:14.5px;color:#a69296;margin-top:8px;letter-spacing:2px}
+.foot{position:absolute;bottom:46px;left:0;right:0;font-size:14px;color:#8d7d80;letter-spacing:1.6px}
+.foot b{color:#dcb958;font-weight:600}
+</style>
+</head>
+<body>
+<div class="card">
+  <svg class="curves" width="1012" height="638" viewBox="0 0 1012 638" fill="none">
+    <path d="M-40 540 C 280 430 620 690 1052 480" stroke="rgba(201,161,59,.16)" stroke-width="1.2"/>
+    <path d="M-40 580 C 300 470 640 720 1052 520" stroke="rgba(221,147,160,.12)" stroke-width="1.2"/>
+  </svg>
+  <svg class="tooth" width="64" height="64" viewBox="0 0 100 100" fill="none">
+    <path d="M50 16 C39 6 18 10 16 30 C14 47 27 58 31 76 C33 86 41 89 43.5 82 C46 74 45 62 50 62 C55 62 54 74 56.5 82 C59 89 67 86 69 76 C73 58 86 47 84 30 C82 10 61 6 50 16 Z" stroke="url(#g)" stroke-width="2.6"/>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="100" y2="100"><stop offset="0" stop-color="#ecd398"/><stop offset="1" stop-color="#a8842a"/></linearGradient></defs>
+  </svg>
+  <div class="script">Oxydent</div>
+  <div class="sub"><span class="ln"></span><span class="tx">Nos gusta verte sonreír</span><span class="ln2"></span></div>
+  <div class="qrbox" id="qr"></div>
+  <div class="cta">Acércame a tu teléfono o escanea el código<small>GUARDA NUESTRO CONTACTO EN UN TOQUE</small></div>
+  <div class="foot">oxydent.evowebec.com &nbsp;·&nbsp; <b>096 413 1541</b> &nbsp;·&nbsp; Av. Antonio Clavijo y Sergio Núñez · Ambato</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<script>
+var q=qrcode(0,'H');q.addData('https://oxydent.evowebec.com');q.make();
+document.getElementById('qr').innerHTML=q.createSvgTag({scalable:true,margin:0});
+</script>
+</body>
+</html>

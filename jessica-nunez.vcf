@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Núñez Pérez;Jessica;Alexandra;Dra.;
+FN:Dra. Jessica Núñez Pérez
+ORG:Oxydent — Servicios Odontológicos
+TITLE:Odontóloga
+TEL;TYPE=CELL:+593964131541
+EMAIL;TYPE=INTERNET:oxydent2@gmail.com
+EMAIL;TYPE=INTERNET:jessalenunez@gmail.com
+URL:https://www.instagram.com/oxy_dent/
+ADR;TYPE=WORK:;;Av. Antonio Clavijo y Sergio Núñez;Ambato;;180104;Ecuador
+NOTE:Oxydent — Nos gusta verte sonreír. Prevención integral, estética y especialidad. Lun–Vie 09h00–19h00, Sáb 09h00–17h00, Dom previa cita.
+END:VCARD

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oxydent · Servicios Odontológicos · Ambato</title>
+<meta name="description" content="Oxydent — Dra. Jessica Núñez. Atención odontológica en prevención integral, estética y de especialidad. Ambato, Ecuador. Nos gusta verte sonreír.">
+<meta property="og:title" content="Oxydent · Servicios Odontológicos">
+<meta property="og:description" content="Nos gusta verte sonreír — Agenda tu cita por WhatsApp. Ambato, Ecuador.">
+<style>
+:root{
+  --rosa:#dd93a0;--rosa-d:#c97786;--rosa-bg:#fdf3f5;--rosa-s:#f9e3e8;
+  --gold:#c9a13b;--gold-l:#e2c26e;--gold-d:#a8842a;
+  --gris:#9a9ea3;--ink:#4a3f42;--muted:#8b7e81;--line:#f0dade;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Segoe UI',system-ui,sans-serif;color:var(--ink);min-height:100vh;
+  background:linear-gradient(180deg,#f7d8de 0%,#fdf3f5 40%,#fff 100%);
+  display:flex;justify-content:center;padding:26px 14px 44px;
+}
+.frame{
+  width:100%;max-width:430px;border-radius:30px;padding:2px;height:fit-content;
+  background:linear-gradient(160deg,var(--gold-l),rgba(201,161,59,.2) 30%,rgba(201,161,59,.2) 70%,var(--gold-l));
+  box-shadow:0 26px 60px rgba(201,119,134,.28);
+}
+.card{border-radius:28px;overflow:hidden;text-align:center;background:#fff;position:relative}
+/* cabecera */
+.hero{
+  position:relative;padding:30px 20px 56px;
+  background:linear-gradient(160deg,#f6cdd5 0%,#fbe4e9 55%,#fdf3f5 100%);
+}
+.hero .words{
+  position:absolute;inset:0;pointer-events:none;opacity:.35;overflow:hidden;
+  font-weight:800;text-transform:uppercase;color:#fff;text-align:left;
+}
+.hero .words span{position:absolute;letter-spacing:2px}
+.brand-script{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:700;font-size:40px;color:var(--gold);text-shadow:0 1px 0 #fff,0 3px 8px rgba(168,132,42,.3);position:relative}
+.brand-sub{font-size:10.5px;letter-spacing:4.5px;text-transform:uppercase;color:var(--gris);font-weight:700;margin-top:4px;position:relative}
+.wave{position:absolute;bottom:-1px;left:0;width:100%;height:38px;display:block}
+/* insignia */
+.badge{
+  width:118px;height:118px;border-radius:50%;margin:-56px auto 12px;padding:3px;position:relative;z-index:2;
+  background:linear-gradient(140deg,var(--gold-l),var(--gold-d) 70%,var(--gold-l));
+  box-shadow:0 10px 26px rgba(168,132,42,.3);
+}
+.badge .ring{width:100%;height:100%;border-radius:50%;border:3px solid #fff;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center}
+.badge img{width:100%;height:100%;object-fit:cover}
+h1{font-size:25px;font-weight:800;letter-spacing:.3px}
+.role{color:var(--rosa-d);font-weight:700;font-size:14px;margin-top:5px}
+.slogan{font-family:Georgia,serif;font-style:italic;font-size:16px;color:var(--gold-d);margin-top:10px}
+.bio{font-size:13.5px;line-height:1.6;color:var(--muted);max-width:330px;margin:10px auto 0}
+.body{padding:0 22px 24px}
+/* info */
+.info{
+  margin:16px 0;border-radius:16px;border:1px solid var(--line);
+  background:var(--rosa-bg);padding:13px 14px;font-size:12.8px;line-height:1.9;color:var(--ink);text-align:left;
+}
+.info .ico{display:inline-flex;width:20px;height:20px;border-radius:6px;background:var(--rosa);color:#fff;align-items:center;justify-content:center;font-size:11px;margin-right:8px;vertical-align:-4px}
+.info b{color:var(--rosa-d)}
+/* botones */
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 8px;border-radius:999px;
+  border:1.4px solid var(--rosa-s);background:#fff;color:var(--ink);
+  text-decoration:none;font-size:13.5px;font-weight:700;transition:.18s;
+}
+.btn:hover{border-color:var(--rosa);background:var(--rosa-bg);transform:translateY(-1px)}
+.btn .cir{width:27px;height:27px;border-radius:50%;border:1.3px solid var(--rosa);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.btn svg{width:13px;height:13px;fill:var(--rosa-d)}
+.btn.primary{
+  grid-column:1/-1;border:none;color:#fff;font-size:15px;
+  background:linear-gradient(135deg,var(--rosa) 0%,var(--rosa-d) 100%);
+  box-shadow:0 8px 22px rgba(201,119,134,.4);
+}
+.btn.primary .cir{border-color:#fff}
+.btn.primary svg{fill:#fff}
+.btn.primary:hover{filter:brightness(1.05)}
+/* redes */
+.social{display:flex;justify-content:center;gap:14px;margin:20px 0 4px}
+.social a{width:46px;height:46px;border-radius:50%;border:1.4px solid var(--rosa-s);display:flex;align-items:center;justify-content:center;transition:.18s;background:#fff;text-decoration:none}
+.social a:hover{background:var(--rosa);border-color:var(--rosa);transform:translateY(-2px)}
+.social svg{width:20px;height:20px;fill:var(--rosa-d)}
+.social a:hover svg{fill:#fff}
+/* divisores */
+.divider{display:flex;align-items:center;gap:12px;margin:20px 0 12px;color:var(--gold-d)}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-l))}
+.divider::after{background:linear-gradient(90deg,var(--gold-l),transparent)}
+.divider span{font-size:11px;letter-spacing:3px;font-weight:700;text-transform:uppercase}
+/* servicios */
+.servicios{display:grid;grid-template-columns:1fr 1fr;gap:9px;text-align:left}
+.serv{
+  border:1px solid var(--line);border-radius:14px;padding:11px 12px;background:#fff;transition:.18s;
+}
+.serv:hover{border-color:var(--rosa);box-shadow:0 6px 16px rgba(201,119,134,.15);transform:translateY(-2px)}
+.serv .sic{
+  width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--rosa-s),var(--rosa-bg));
+  display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:7px;
+}
+.serv b{display:block;font-size:12.5px;color:var(--ink);line-height:1.25}
+.serv small{display:block;font-size:10.8px;color:var(--muted);line-height:1.45;margin-top:3px}
+/* QR */
+.qr-zone{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:6px}
+.escanea{font-family:'Segoe Script','Brush Script MT',cursive;font-size:15px;color:var(--rosa-d);transform:rotate(-9deg);line-height:1.3}
+.escanea .arrow{display:block;font-size:19px;transform:rotate(15deg)}
+.qr-frame{padding:3px;border-radius:18px;background:linear-gradient(140deg,var(--gold-l),var(--gold-d))}
+.qr-box{background:#fff;padding:10px;border-radius:15px}
+.qr-box svg{display:block;width:128px;height:128px}
+.qr-hint{font-size:12px;color:var(--muted);margin-top:10px}
+/* footer */
+.footer{margin-top:18px;padding-top:15px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted)}
+.footer a{color:var(--gold-d);text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+<div class="frame">
+<main class="card">
+  <header class="hero">
+    <div class="words">
+      <span style="top:12px;left:-8px;font-size:26px;color:#fff">SONRISA</span>
+      <span style="top:46px;left:14px;font-size:15px;color:#fff">BIENESTAR</span>
+      <span style="bottom:30px;left:-4px;font-size:18px;color:#fff">SALUD ORAL</span>
+      <span style="top:20px;right:-6px;font-size:22px;color:#fff">PREVENCIÓN</span>
+      <span style="bottom:38px;right:10px;font-size:14px;color:#fff">LIMPIEZA</span>
+    </div>
+    <div class="brand-script">Oxydent</div>
+    <div class="brand-sub">Servicios &nbsp;Odontológicos</div>
+    <svg class="wave" viewBox="0 0 430 38" preserveAspectRatio="none"><path d="M0,38 L0,16 C80,34 170,2 250,12 C330,20 390,8 430,18 L430,38 Z" fill="#ffffff"/></svg>
+  </header>
+  <div class="body">
+    <div class="badge"><span class="ring">
+      <img src="logo.png" alt="Oxydent" onerror="this.outerHTML=document.getElementById('tooth-svg').innerHTML">
+    </span></div>
+    <!-- diente SVG de respaldo (recreación del logo) -->
+    <template id="tooth-svg"><svg viewBox="0 0 100 100" style="width:74%;height:74%"><defs><clipPath id="tl"><path d="M50 14 C38 4 16 8 14 30 C12 48 26 60 30 78 C32 88 40 92 43 84 C46 76 45 62 50 62 Z"/></clipPath></defs><path d="M50 14 C38 4 16 8 14 30 C12 48 26 60 30 78 C32 88 40 92 43 84 C46 76 45 62 50 62 C55 62 54 76 57 84 C60 92 68 88 70 78 C74 60 88 48 86 30 C84 8 62 4 50 14 Z" fill="#b9bcC0"/><path d="M50 14 C38 4 16 8 14 30 C12 48 26 60 30 78 C32 88 40 92 43 84 C46 76 45 62 50 62 Z" fill="#dd93a0"/><g clip-path="url(#tl)" stroke="#fff" stroke-width="2.6" stroke-linecap="round" fill="#fff"><path d="M33 24 L33 62" fill="none"/><ellipse cx="27" cy="30" rx="4.5" ry="2.6" transform="rotate(-35 27 30)"/><ellipse cx="39" cy="34" rx="4.5" ry="2.6" transform="rotate(35 39 34)"/><ellipse cx="26" cy="42" rx="4.5" ry="2.6" transform="rotate(-35 26 42)"/><ellipse cx="39" cy="46" rx="4.5" ry="2.6" transform="rotate(35 39 46)"/><ellipse cx="28" cy="54" rx="4.2" ry="2.4" transform="rotate(-35 28 54)"/></g><path d="M50 14 C38 4 16 8 14 30 C12 48 26 60 30 78 C32 88 40 92 43 84 C46 76 45 62 50 62 C55 62 54 76 57 84 C60 92 68 88 70 78 C74 60 88 48 86 30 C84 8 62 4 50 14 Z" fill="none" stroke="#c9a13b" stroke-width="2.4"/></svg></template>
+
+    <h1>Dra. Jessica Núñez Pérez</h1>
+    <p class="role">Odontóloga · Oxydent</p>
+    <p class="slogan">"Nos gusta verte sonreír"</p>
+    <p class="bio">Atención odontológica en prevención integral, estética y de especialidad.</p>
+
+    <div class="info">
+      <div><span class="ico">🕐</span><b>Lun – Vie:</b> 09h00–12h00 · 13h00–19h00</div>
+      <div><span class="ico">🕐</span><b>Sábado:</b> 09h00–12h00 · 13h00–17h00 &nbsp;·&nbsp; <b>Dom:</b> previa cita</div>
+      <div><span class="ico">📍</span><b>Av. Antonio Clavijo y Sergio Núñez</b> · Ambato</div>
+    </div>
+
+    <div class="actions">
+      <a class="btn primary" href="https://wa.me/593964131541?text=Hola%20Oxydent,%20vi%20su%20tarjeta%20digital%20y%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">
+        <span class="cir"><svg viewBox="0 0 24 24"><path d="M17 3H7a2 2 0 0 0-2 2v16l4-3h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg></span>
+        Agendar cita por WhatsApp
+      </a>
+      <a class="btn" href="jessica-nunez.vcf" download>
+        <span class="cir"><svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 4h14v-2H5v2z"/></svg></span>
+        Guardar contacto
+      </a>
+      <a class="btn" href="tel:+593964131541">
+        <span class="cir"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3.5a1 1 0 0 1 1-1H7.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg></span>
+        Llamar
+      </a>
+      <a class="btn" href="mailto:oxydent2@gmail.com">
+        <span class="cir"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
+        Correo
+      </a>
+      <a class="btn" href="https://maps.app.goo.gl/rm5oFWjufyw5m7qh8" target="_blank" rel="noopener">
+        <span class="cir"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5" fill="#fff"/></svg></span>
+        Ubicación
+      </a>
+    </div>
+
+    <div class="social">
+      <a href="https://www.instagram.com/oxy_dent/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.35 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.35-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.35-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.35 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/OxyDnt" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.1 24 12.07z"/></svg>
+      </a>
+    </div>
+
+    <div class="divider"><span>Nuestros Servicios</span></div>
+    <div class="servicios">
+      <div class="serv"><div class="sic">🦷</div><b>Profilaxis dental</b><small>Limpieza completa con ultrasonido de baja frecuencia</small></div>
+      <div class="serv"><div class="sic">✨</div><b>Restauraciones estéticas</b><small>Calzas estéticas de resina de alta gama</small></div>
+      <div class="serv"><div class="sic">👶</div><b>Odontopediatría</b><small>Atención integral a niños de 6 meses a 12 años</small></div>
+      <div class="serv"><div class="sic">🔬</div><b>Endodoncia</b><small>Tratamientos de conductos uni, bi y multirradiculares</small></div>
+      <div class="serv"><div class="sic">🪥</div><b>Periodoncia</b><small>Cirugía, tratamiento y manejo de tejidos blandos</small></div>
+      <div class="serv"><div class="sic">⚕️</div><b>Cirugía maxilofacial</b><small>Terceros molares, supernumerarios y patologías orales</small></div>
+      <div class="serv"><div class="sic">👑</div><b>Rehabilitación oral</b><small>Coronas, incrustaciones, puentes y prótesis</small></div>
+      <div class="serv"><div class="sic">😬</div><b>Ortodoncia</b><small>Brackets convencionales, estéticos y de autoligado</small></div>
+      <div class="serv"><div class="sic">😁</div><b>Estética dental</b><small>Diseño de sonrisa en resina, porcelana y disilicato</small></div>
+      <div class="serv"><div class="sic">🔩</div><b>Implantes dentales</b><small>Cirugía de implantes y coronas de zirconio</small></div>
+    </div>
+
+    <div class="divider"><span>Comparte esta tarjeta</span></div>
+    <div class="qr-zone">
+      <div class="escanea">Escanea o<br>comparte<span class="arrow">↝</span></div>
+      <div class="qr-frame"><div class="qr-box" id="qr"></div></div>
+    </div>
+    <p class="qr-hint">📱 Escanea o comparte el enlace de esta página</p>
+
+    <div class="footer">Tarjeta digital creada por <a href="https://www.evowebec.com" target="_blank" rel="noopener">EvoWeb</a> · Ambato, Ecuador</div>
+  </div>
+</main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<script>
+try{var q=qrcode(0,'M');q.addData(location.href);q.make();document.getElementById('qr').innerHTML=q.createSvgTag({scalable:true,margin:0});}catch(e){document.getElementById('qr').innerHTML='<p style="color:#111;font-size:12px;max-width:128px">QR disponible al publicar</p>';}
+</script>
+<script>
+  window.goatcounter = { path: function(p) { return location.host + p } };
+</script>
+<script data-goatcounter="https://evowebec.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

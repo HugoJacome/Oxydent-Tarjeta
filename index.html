@@ -200,7 +200,7 @@ h1{font-size:25px;font-weight:800;letter-spacing:.3px}
     <div class="divider"><span>Comparte esta tarjeta</span></div>
     <div class="qr-zone">
       <div class="escanea">Escanea o<br>comparte<span class="arrow">↝</span></div>
-      <div class="qr-frame"><div class="qr-box" id="qr"></div></div>
+      <div class="qr-frame"><div class="qr-box" id="qr"><img src="QR-Oxydent.png" alt="QR Oxydent" style="display:block;width:128px;height:128px" onerror="this.remove();genQR()"></div></div>
     </div>
     <p class="qr-hint">📱 Escanea o comparte el enlace de esta página</p>
 
@@ -210,7 +210,7 @@ h1{font-size:25px;font-weight:800;letter-spacing:.3px}
 </div>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
 <script>
-try{var q=qrcode(0,'M');q.addData(location.href);q.make();document.getElementById('qr').innerHTML=q.createSvgTag({scalable:true,margin:0});}catch(e){document.getElementById('qr').innerHTML='<p style="color:#111;font-size:12px;max-width:128px">QR disponible al publicar</p>';}
+function genQR(){try{var q=qrcode(0,'M');q.addData('https://oxydent.evowebec.com');q.make();document.getElementById('qr').innerHTML=q.createSvgTag({scalable:true,margin:0});}catch(e){}}
 </script>
 <script>
   window.goatcounter = { path: function(p) { return location.host + p } };
